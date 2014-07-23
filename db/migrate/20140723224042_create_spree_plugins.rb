@@ -1,6 +1,6 @@
-class CreatePlugins < ActiveRecord::Migration
+class CreateSpreePlugins < ActiveRecord::Migration
   def change
-    create_table :plugins do |t|
+    create_table :spree_plugins do |t|
       t.string :name
       t.string :type
       t.text :code

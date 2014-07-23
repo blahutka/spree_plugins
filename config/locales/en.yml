@@ -4,4 +4,8 @@
 en:
   hello: "Hello world"
   spree:
+    plugins_title: 'Plugins'
     add_plugins: 'Add Plugins'
+    new_plugin: 'New Plugin'
+    back_to_plugins_list: 'Back to plugins'
+    plugin_name: 'Plugin Name'
