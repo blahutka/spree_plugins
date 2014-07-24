@@ -13,14 +13,16 @@
 <% if @plugins.any? %>
   <table class="index">
     <colgroup>
-      <col style="width: 30%">
-      <col style="widths: 40%">
       <col style="width: 15%">
+      <col style="width: 15%">
+      <col style="width: 50%">
+      <col style="width: 5%">
       <col style="width: 15%">
     </colgroup>
     <thead>
       <tr data-hook="admin_plugins_index_headers">
         <th><%= Spree.t(:plugin_name) %></th>
+        <th><%= Spree.t(:css_class) %></th>
         <th><%= Spree.t(:code_snippet) %></th>
         <th><%= Spree.t(:active) %></th>
         <th class="actions"></th>
@@ -29,8 +31,9 @@
     <tbody>
       <% @plugins.each do |plugin|%>
         <tr id="<%= spree_dom_id plugin %>" data-hook="admin_plugins_index_rows" class="<%= cycle('odd', 'even')%>">
-          <td class="align-center"><%= plugin.name%></td>
-          <td class="align-center"><%= plugin.code %></td>
+          <td class="align-center"><%= plugin.name %></td>
+          <td class="align-center"><%= plugin.css %></td>
+          <td class="align-center"><%= plugin.code[0..200] %></td>
           <td class="align-center"><%= (plugin.state=="ACTIVE") ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
           <td class="actions">
             <%= link_to_edit plugin, :no_text => true %>
