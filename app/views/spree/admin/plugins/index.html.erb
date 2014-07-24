@@ -33,7 +33,7 @@
         <tr id="<%= spree_dom_id plugin %>" data-hook="admin_plugins_index_rows" class="<%= cycle('odd', 'even')%>">
           <td class="align-center"><%= plugin.name %></td>
           <td class="align-center"><%= plugin.css %></td>
-          <td class="align-center"><%= plugin.code %></td>
+          <td class="align-center"><%= plugin.code[0..200] %></td>
           <td class="align-center"><%= (plugin.state=="ACTIVE") ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
           <td class="actions">
             <%= link_to_edit plugin, :no_text => true %>
