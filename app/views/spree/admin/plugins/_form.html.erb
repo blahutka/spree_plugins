@@ -3,17 +3,17 @@
     <div class="alpha four columns">
       <div data-hook="name_id" class="field">
         <%= label_tag nil, Spree.t(:plugin_name) %>
-        <%= text_field :tracker, :analytics_id, :class => 'fullwidth' %>
+        <%= text_field :plugin, :name, :class => 'fullwidth' %>
       </div>
       <div data-hook="active" class="field">
         <%= label_tag nil, Spree.t(:active) %>
         <ul>
           <li>
-            <%= radio_button(:tracker, :active, true) %>
+            <%= radio_button(:plugin, :state, true) %>
             <%= Spree.t(:say_yes) %>
           </li>
           <li>
-            <%= radio_button(:tracker, :active, false) %>
+            <%= radio_button(:plugin, :state, false) %>
             <%= Spree.t(:say_no) %>
           </li>
         </ul>
@@ -22,7 +22,7 @@
     <div class="omega eight columns">
       <div data-hook="code" class="field">
         <%= label_tag nil, Spree.t(:code) %>
-        <%= text_area(:tracker, :code, cols: 5, rows: 5, :class=>'fullwidth') %>
+        <%= text_area(:plugin, :code, cols: 5, rows: 5, :class=>'fullwidth') %>
       </div>
     </div>
   </div>
