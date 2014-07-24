@@ -6,7 +6,7 @@
 
 <% content_for :page_actions do %>
   <li>
-    <%= button_link_to Spree.t(:new_plugin), new_object_url, :icon => 'plus', :id => 'admin_new_tracker_link' %>
+    <%= button_link_to Spree.t(:new_plugin), new_object_url, :icon => 'plus', :id => 'admin_new_plugin_link' %>
   </li>
 <% end %>
 
@@ -19,22 +19,22 @@
       <col style="width: 15%">
     </colgroup>
     <thead>
-      <tr data-hook="admin_trackers_index_headers">
-        <th><%= Spree.t(:google_analytics_id) %></th>
-        <th><%= Spree.t(:environment) %></th>
+      <tr data-hook="admin_plugins_index_headers">
+        <th><%= Spree.t(:plugin_name) %></th>
+        <th><%= Spree.t(:code_snippet) %></th>
         <th><%= Spree.t(:active) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
     <tbody>
-      <% @plugins.each do |tracker|%>
-        <tr id="<%= spree_dom_id tracker %>" data-hook="admin_trackers_index_rows" class="<%= cycle('odd', 'even')%>">
-          <td class="align-center"><%= tracker.analytics_id %></td>
-          <td class="align-center"><%= tracker.environment.to_s.titleize %></td>
-          <td class="align-center"><%= tracker.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+      <% @plugins.each do |plugin|%>
+        <tr id="<%= spree_dom_id plugin %>" data-hook="admin_plugins_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class="align-center"><%= plugin.name%></td>
+          <td class="align-center"><%= plugin.code %></td>
+          <td class="align-center"><%= (plugin.state=="ACTIVE") ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
           <td class="actions">
-            <%= link_to_edit tracker, :no_text => true %>
-            <%= link_to_delete tracker, :no_text => true %>
+            <%= link_to_edit plugin, :no_text => true %>
+            <%= link_to_delete plugin, :no_text => true %>
           </td>
         </tr>
       <% end %>
@@ -42,7 +42,7 @@
   </table>
 <% else %>
   <div class="no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/tracker')) %>,
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/plugin')) %>,
     <%= link_to Spree.t(:add_one), new_object_url %>!
   </div>
 <% end %>

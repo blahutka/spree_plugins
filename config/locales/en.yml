@@ -2,7 +2,6 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
   spree:
     plugins_title: 'Plugins'
     add_plugins: 'Add Plugins'
@@ -10,3 +9,9 @@ en:
     back_to_plugins_list: 'Back to plugins'
     plugin_name: 'Plugin Name'
     edit_plugin: 'Edit Plugin'
+  activerecord:
+    models:
+      spree/plugin:
+        one: 'Plugin'
+        other: 'Plugins'
+

@@ -4,16 +4,17 @@
       <div data-hook="name_id" class="field">
         <%= label_tag nil, Spree.t(:plugin_name) %>
         <%= text_field :plugin, :name, :class => 'fullwidth' %>
+        <%= hidden_field :plugin, :type, :value => 'plugin' %>
       </div>
       <div data-hook="active" class="field">
         <%= label_tag nil, Spree.t(:active) %>
         <ul>
           <li>
-            <%= radio_button(:plugin, :state, true) %>
+            <%= radio_button(:plugin, :state, "ACTIVE", :checked => @plugin.state == 'ACTIVE' ) %>
             <%= Spree.t(:say_yes) %>
           </li>
           <li>
-            <%= radio_button(:plugin, :state, false) %>
+            <%= radio_button(:plugin, :state, "INACTIVE", :checked => @plugin.state != 'ACTIVE') %>
             <%= Spree.t(:say_no) %>
           </li>
         </ul>
