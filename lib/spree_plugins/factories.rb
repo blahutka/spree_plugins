@@ -3,4 +3,12 @@ FactoryGirl.define do
   #
   # Example adding this to your spec_helper will load these Factories for use:
   # require 'spree_plugins/factories'
+
+  factory :plugin, class: Spree::Plugin do
+    name 'A100'
+    css 'test-class'
+    code '<div>HI</div>'
+    state 'ACTIVE'
+    type 'plugin'
+  end
 end
