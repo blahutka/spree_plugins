@@ -39,7 +39,7 @@ describe Spree::Plugin do
       click_link "Add Plugins"
     end
 
-    it "should be able to create a new analytics tracker" do
+    it "should be able to create a new plugin" do
       click_link "admin_new_plugin_link"
       fill_in "plugin_name", :with => "A100"
       fill_in "plugin_css", :with => "test-class"
