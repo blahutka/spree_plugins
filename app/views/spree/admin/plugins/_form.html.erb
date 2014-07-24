@@ -4,6 +4,8 @@
       <div data-hook="name_id" class="field">
         <%= label_tag nil, Spree.t(:plugin_name) %>
         <%= text_field :plugin, :name, :class => 'fullwidth' %>
+        <%= label_tag nil, Spree.t(:css_class) %>
+        <%= text_field :plugin, :css, :class => 'fullwidth' %>
         <%= hidden_field :plugin, :type, :value => 'plugin' %>
       </div>
       <div data-hook="active" class="field">

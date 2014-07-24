@@ -5,7 +5,7 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
   :text => "
       <% Spree::Plugin.all.each do |plugin| %>
         <% if plugin.state == 'ACTIVE' %>
-            <div class='<%= plugin.css %> content'><%= raw plugin.code %></div>
+            <div class='<%= plugin.css %>'><%= raw plugin.code %></div>
         <% end %>
       <% end %>
   ")
