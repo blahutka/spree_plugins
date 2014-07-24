@@ -43,8 +43,8 @@ describe Spree::Plugin do
       click_link "admin_new_plugin_link"
       fill_in "plugin_name", :with => "A100"
       fill_in "plugin_css", :with => "test-class"
-      fill_in "plugin_code", :with => "plugin"
-      click_button 'plugin_state_active'
+      fill_in "plugin_code", :with => "<div>HI</div>"
+      choose 'plugin_state_active'
       click_button "Create"
 
       page.should have_content("successfully created!")
