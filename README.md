@@ -1,7 +1,20 @@
 SpreePlugins
 ============
 
-spree_plugins is a product-facing Spree extension that enables Spree storefront owners to add custom scripts and features to products.
+This Spree extension enables Spree storefront owners to add custom scripts and features as plugins to products.
+
+Examples
+--------
+[**share-button**](https://github.com/carrot/share-button)
+	1. Make a new plugin in the Configurations menu of admin
+	2. Download and copy the script from the [Github page](https://github.com/carrot/share-button) as code for this new plugin.
+	3. Activate then save the plugin.
+	(4.) Optional: include a custom css class to position the plugin to your liking on the product page.
+
+[**addThis**](https://www.addthis.com/)
+	1. Setup an account with [addthis.com](https://www.addthis.com/)
+	2. Copy and paste their div and script tag into the code for a new plugin
+	3. Activate and save the plugin.
 
 Installation
 ------------
@@ -18,6 +31,8 @@ Bundle your dependencies and run the installation generator:
 bundle
 bundle exec rails g spree_plugins:install
 ```
+
+
 
 Testing
 -------
