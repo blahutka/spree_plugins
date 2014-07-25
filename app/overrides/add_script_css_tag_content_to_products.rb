@@ -5,14 +5,7 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
   :text => "
       <% Spree::Plugin.all.each do |plugin| %>
         <% if plugin.state == 'ACTIVE' %>
-            <div class='<%= plugin.css %>' div-move='<%= plugin.css.empty? %>'><%= raw plugin.code %></div>
+            <div class='<%= plugin.css %>' id='<%= plugin.name.downcase.tr(' ','_')%>_plugin'><%= raw plugin.code %></div>
         <% end %>
       <% end %>
-      <!-- <script> $(document).ready(function() {
-          $('[div-move=\"false\"]').each(function() {
-            debugger
-            $($(this).detach()).appendTo('#'+$(this).attr('class'));
-          });
-        });
-      </script> -->
   ")
