@@ -56,6 +56,9 @@ Examples
 This code is linked to an existing account. To have all the features of add this, visit their [website](https://www.disqus.com/).
 
 [**add this**](https://www.addthis.com/)
+
+![alt tag](https://raw.github.com/godaddy/spree_plugins/gh-pages/assets/addthis.png)
+
   1. Activate plugin with the code below and name as add_this.
 ```
 <div class="addthis_native_toolbox"></div>
@@ -63,6 +66,7 @@ This code is linked to an existing account. To have all the features of add this
 ```
 
 This code is linked to an existing account. To have all the features of add this, visit their [website](https://www.addthis.com).
+
 
 [**share-button**](https://github.com/carrot/share-button)
 
