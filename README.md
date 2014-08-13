@@ -57,8 +57,6 @@ This code is linked to an existing account. To have all the features of add this
 
 [**add this**](https://www.addthis.com/)
 
-![alt tag](https://raw.githubusercontent.com/godaddy/spree_plugins/gh-pages/app/assets/images/addthis.png)
-
   1. Activate plugin with the code below and name as add_this.
 ```
 <div class="addthis_native_toolbox"></div>
@@ -116,5 +114,10 @@ Simply add this require statement to your spec_helper:
 ```ruby
 require 'spree_plugins/factories'
 ```
+
+Example Images
+--------------
+
+![alt tag](https://raw.githubusercontent.com/godaddy/spree_plugins/gh-pages/app/assets/images/addthis.png)
 
 Copyright (c) 2014 GoDaddy, released under the New BSD License
