@@ -57,7 +57,7 @@ This code is linked to an existing account. To have all the features of add this
 
 [**add this**](https://www.addthis.com/)
 
-![alt tag](https://raw.github.com/godaddy/spree_plugins/gh-pages/assets/addthis.png)
+![alt tag](https://raw.githubusercontent.com/godaddy/spree_plugins/gh-pages/app/assets/images/addthis.png)
 
   1. Activate plugin with the code below and name as add_this.
 ```
