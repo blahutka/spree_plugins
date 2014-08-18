@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_plugins'
-  s.version     = '0.0.0'
+  s.version     = '1.0.0'
   s.summary     = 'Spree extension to add plugins to products'
   s.description = 'This enables storefront owners to add custom scripts to their site to include advanced functionality'
   s.required_ruby_version = '>= 1.9.3'
@@ -15,8 +15,6 @@ Gem::Specification.new do |s|
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
-
-  s.add_dependency 'spree_core', '~> 2.3.1'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
